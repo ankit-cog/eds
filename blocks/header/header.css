@@ -1,3 +1,5 @@
+/* stylelint-disable */
+
 /* header and nav layout */
 header .nav-wrapper {
   background-color: var(--background-color);
@@ -206,7 +208,7 @@ header nav .nav-sections ul > li > ul > li {
     content: '';
     display: inline-block;
     position: absolute;
-    top: 0.5em;
+    top: 0.2em;
     right: 2px;
     transform: rotate(135deg);
     width: 6px;
@@ -218,7 +220,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections .nav-drop[aria-expanded='true']::after {
     top: unset;
-    bottom: 0.5em;
+    bottom: 0.2em;
     transform: rotate(315deg);
   }
 
@@ -226,6 +228,7 @@ header nav .nav-sections ul > li > ul > li {
     display: flex;
     gap: 24px;
     margin: 0;
+    justify-content: right;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {
@@ -242,7 +245,7 @@ header nav .nav-sections ul > li > ul > li {
     display: block;
     position: absolute;
     left: -24px;
-    width: 200px;
+    width: 120px;
     top: 150%;
     padding: 16px;
     background-color: var(--light-color);
@@ -262,11 +265,40 @@ header nav .nav-sections ul > li > ul > li {
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
-    padding: 8px 0;
+    padding: 4px 0;
   }
 }
 
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+
+/*** Custom Style ***/
+
+  header nav a:any-link:hover{
+    transition: .2s;
+    color: var(--cta-primary-color);
+  }
+
+  header nav .nav-tools a:any-link {
+      color:  var(--primary-white);;
+  }
+   header nav .nav-tools a:any-link:hover {
+      color:  var(--primary-white);;
+  }
+  .nav-tools a {
+    display: block;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 10px 25px;
+    color: var(--primary-white);
+    background: var(--cta-primary-color);
+    transition: .5s;
+    text-decoration: none;
+  }
+
+   .nav-tools a:hover {
+    background: var(--cta-primary-hover);
 }
