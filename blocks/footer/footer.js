@@ -17,4 +17,59 @@ export default async function decorate(block) {
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
   block.append(footer);
+
+  const footerColumns = block.querySelector('.columns.footer');
+  if (!footerColumns) return;
+
+  const row = footerColumns.firstElementChild;
+  const columns = [...row.children];
+
+  row.classList.add('footer-columns');
+
+  columns.forEach((col, index) => {
+    col.classList.add('footer-col', `footer-col-${index + 1}`);
+  });
+
+  const galleryColumn = block.querySelector('.footer-col-4');
+
+  if (galleryColumn) {
+
+    const images = galleryColumn.querySelectorAll('p');
+
+    const galleryWrapper = document.createElement('div');
+    galleryWrapper.className = 'footer-gallery';
+
+    images.forEach((p) => {
+
+    const picture = p.querySelector('picture');
+    if (!picture) return;
+
+    const item = document.createElement('div');
+    item.className = 'gallery-item';
+
+    item.append(picture);
+
+    galleryWrapper.append(item);
+
+    p.remove();
+
+  });
+
+  galleryColumn.append(galleryWrapper);
+
+  }
+  
+  const bottomColumns = block.querySelector('.columns.footer-bottom');
+
+	if (bottomColumns) {
+
+	  const row = bottomColumns.firstElementChild;
+	  const cols = [...row.children];
+
+	  row.classList.add('footer-bottom-inner');
+
+	  cols[0]?.classList.add('footer-copyright');
+	  cols[1]?.classList.add('footer-links');
+
+	}
 }

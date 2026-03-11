@@ -3,11 +3,11 @@ footer {
   font-size: var(--body-font-size-xs);
 }
 
-footer .footer > div {
+/* footer .footer > div {
   margin: auto;
   max-width: 1200px;
   padding: 40px 24px 24px;
-}
+} */
 
 footer .footer p {
   margin: 0;
@@ -15,6 +15,187 @@ footer .footer p {
 
 @media (width >= 900px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    padding: 8px;
+    max-width: 100%;
+    display: flex;
+    align-items: unset;
   }
 }
+
+.footer.block {
+    background-image: url(https://themeloto.com/wps/transpo/wp-content/uploads/2024/11/transpo-slider.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+}
+
+.columns.footer.block.columns-4-cols {
+    padding: 100px 0 90px;
+}
+
+.footer.block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+    background-color: rgba(0,0,0,0.81);
+}
+
+.footer-col p {
+  font-size: 18px;
+  color: #fff;
+}
+
+.footer-col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-col ul li {
+  font-size: 18px;
+  color: #fff;
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.footer-col ul li:before {
+    content: "\2713\0020";
+    color: #fff;
+    padding: 2px;
+    margin: 0;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    margin-right: 4px;
+}
+
+.footer-col ul li a {
+    color: #fff;
+}
+
+.footer-col h2 {
+  font-size: 18.03px;
+  color: #fff;
+  margin: 0 0 20px;
+  position: relative;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+}
+
+.footer-col h2::after,.footer-col h2::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.footer-col h2::before {
+    border: 1px solid #eb1933;
+    width: 26%;
+}
+
+.footer .columns .footer-col-1 {
+    order: revert;
+    flex: none;
+}
+
+.footer .columns .footer-col-1 p {
+    margin-top: 10px;
+}
+
+.footer .columns .footer-col {
+  flex: inherit;
+}
+
+.footer-col-1 {
+    width: 33.33333333%;
+}
+
+.footer-col-2 {
+    width: 25%;
+}
+
+.footer-col-3 {
+    width: 16.66666667%;
+}
+
+.footer-col-4 {
+    width: 25%;
+}
+
+.footer .footer-col img {
+  width: auto;
+  height: 80px;
+}
+
+.footer-gallery {
+    column-gap: 8px;
+}
+
+.gallery-item {
+    max-width: 33.33%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+
+.footer .footer-col .gallery-item img {
+    height: 50px;
+}
+
+.footer-bottom {
+    padding: 15px 0;
+    position: relative;
+}
+
+.footer-bottom:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 1px;
+    width: 68%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #fff;
+}
+
+.footer-bottom-inner {
+    padding: 0 8px;
+}
+
+.footer-copyright p {
+  color: #fff;
+  font-size: 18px;
+}
+
+.footer-links {
+    text-align: right;
+}
+
+.footer-links a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  transition: .3s;
+  padding: 0 10px;
+}
+
+.footer-links a:hover {
+  color:#eb1933
+}
+
