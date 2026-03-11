@@ -118,11 +118,20 @@ export default async function decorate(block) {
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const fragment = await loadFragment(navPath);
 
+  // const navTopMeta = getMetadata('nav');
+  // const navTopPath = navTopMeta ? new URL(navTopMeta, window.location).pathname : '/nav-top';
+  // const topFragment = await loadFragment(navTopPath);
+
   // decorate nav DOM
   block.textContent = '';
   const nav = document.createElement('nav');
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
+
+  // block.textContent = '';
+  // const navTop = document.createElement('nav-top');
+  // nav.id = 'navTop';
+  // while (topFragment.firstElementChild) navTop.prepend(topFragment.firstElementChild);
 
   const classes = ['brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
@@ -168,4 +177,13 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  const resp = await fetch('/nav-top.plain.html');
+  // console.log(resp);
+  const html = await resp.text();
+
+  const topBar = document.createElement('div');
+  topBar.className = 'top-bar';
+  topBar.innerHTML = html;
+  block.prepend(topBar);
 }
