@@ -1,0 +1,56 @@
+.banner-wrapper {
+    padding: 0 !important;
+    max-width: 100% !important;
+}
+
+.banner {
+  background: url('https://themeloto.com/wps/transpo/wp-content/uploads/2024/04/project-image.jpg') center/cover no-repeat;
+  padding: 60px;
+}
+
+.banner-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-text {
+  max-width: 600px;
+  font-size: 40px;
+  color: white;
+  font-weight: 600;
+}
+
+.banner-text h2 {
+    padding: 10px 0px 0px 0px;
+    font-size: 45px;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.banner-cta {
+    position: relative;
+}
+
+.banner-cta a {
+    background: #eb1933;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 10px 30px;
+    text-align: center;
+    position: relative;
+    margin-right: 15px;
+    z-index: 2;
+    -webkit-transition: 1s;
+    transition: 1s;
+    color: #fff;
+}
+
+.banner-cta a:hover {
+    background-color: #022559;
+}
+
+.banner-cta a:after {
+    content: "❯";
+    margin-left:10px;
+}

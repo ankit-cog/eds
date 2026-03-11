@@ -313,8 +313,8 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1140px;
+  margin: 80px auto;
   padding: 0 24px;
 }
 

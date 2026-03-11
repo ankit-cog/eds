@@ -317,12 +317,14 @@ header nav .nav-tools {
 .top-bar .header-top > div {
     display: flex;
     justify-content: space-between;
+    gap: unset;
 }
 
 .top-bar .header-top > div > div {
     display: flex;
     align-items: center;
     column-gap: 8px;
+    flex: unset;
 }
 
 .top-bar .header-top ul {
