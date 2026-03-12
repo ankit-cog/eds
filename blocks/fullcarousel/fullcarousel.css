@@ -1,0 +1,74 @@
+main > .section .fullcarousel-wrapper {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.fullcarousel {
+    display: flex;
+    column-gap: 24px;
+}
+
+.fullcarousel .carousel-item {
+    position: relative;
+}
+
+.fullcarousel .carousel-body {
+    position: absolute;
+    bottom: auto;
+    top: -100px;
+    left: 30px;
+    right: 30px;
+    transition: .5s;
+    opacity: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.fullcarousel .carousel-item:hover .carousel-body {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    bottom: 30px;
+    top: 25px;
+}
+
+.fullcarousel .carousel-body .carousel-title {
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.fullcarousel .carousel-body .carousel-text {
+    font-size: 18px;
+    color: #fff;
+}
+
+.fullcarousel .carousel-image{
+    position: relative;
+    overflow: hidden;
+}
+
+.fullcarousel .carousel-image:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: scale(0);
+    transition: .5s;
+    z-index: 1;
+    background-color: #022559;
+    opacity: 0.5;
+}
+
+.fullcarousel .carousel-item:hover .carousel-image img, .fullcarousel .carousel-item:hover .carousel-image:before {
+    transform: scale(1.2);
+}
+
+.fullcarousel .carousel-image img {
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-transition: .5s;
+    transition: .5s;
+    width: 100%;
+}

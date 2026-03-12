@@ -1,0 +1,41 @@
+main .section .marquee-wrapper {
+    padding: 0;
+    max-width: 100%;
+}
+
+.marquee.block {
+    background-color: #EB1933;
+    display: flex;
+    overflow: hidden;
+}
+
+.marquee.block > div {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 75%;
+    animation: txmarset 10s linear infinite;
+}
+
+@keyframes txmarset {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - 0%));
+    }
+  }
+
+.marquee.block a {
+    background-image: url(https://themeloto.com/wps/transpo/wp-content/uploads/2024/11/transpo-slider2.jpg);
+    opacity: 1;
+    -webkit-text-stroke: 1px #888888;
+    -webkit-text-fill-color: transparent;  
+    font-size: 100px;
+    color: transparent;
+    font-size: 100px;
+    margin: 0;
+    background-position: center center;
+    -webkit-background-clip: text;
+  }

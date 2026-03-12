@@ -137,3 +137,133 @@
     }
   }
 }
+
+
+/***service cards***/
+
+.cards-container h4 {
+  color: #eb1933;
+  font-size: 18px;
+}
+
+.cards-container h2 {
+  margin: 0;
+}
+
+.service-cards {
+    margin-top: -40px;
+    display: flex;
+    flex-wrap: initial;
+}
+
+.service-cards ul {
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+}
+
+.service-cards ul li {
+    box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.2);
+    padding: 30px 25px;
+    max-width: 27.33%;
+    position: relative;
+    z-index: 1;
+}
+.service-cards ul li::before {
+    background: #eb1933;
+    content: "";
+    position: absolute;
+    transition: .5s;
+    z-index: -1;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 3px;
+}
+
+.service-cards ul li:hover::before {
+    width: 100%;
+}
+.service-cards ul li:hover h2,.service-cards ul li:hover a,.service-cards ul li:hover p,.service-cards ul li:hover li{
+  color: #fff !important;
+}
+
+.service-cards ul li .cards-card-image img {
+    width: auto;
+    aspect-ratio: auto;
+}
+
+.service-cards ul li .cards-card-image {
+    text-align: left;
+    padding: 10px 0;
+}
+
+.service-cards ul li .cards-card-body {
+    margin: 0;
+}
+
+.service-cards ul li .cards-card-body h2 {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    line-height: 1.2;
+    font-weight: 700;
+    transition: .5s;
+    color: #0e0e0e;
+    margin: 0 0 10px;
+    font-size: 21px;
+}
+
+.service-cards ul li .cards-card-body h2 a {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    line-height: 1.2;
+    font-weight: 700;
+    transition: .5s;
+    color: #0e0e0e;
+    margin: 0 0 10px;
+    font-size: 21px;
+}
+
+.service-cards ul li .cards-card-body ul {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.service-cards ul li .cards-card-body ul li {
+  box-shadow: none;
+  padding: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: auto;
+  max-width: 100%;
+}
+
+
+.service-cards ul li .cards-card-body ul li::before {
+content: "\2713\0020";
+    background: #000;
+    color: #fff;
+    padding: 2px;
+    margin-right: 10px;
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s;
+    position: static;
+}
+
+.service-cards ul li .cards-card-body a {
+    color: #000;
+}
+
+.service-cards ul li .cards-card-body a:after {
+    content: "❯";
+    margin-left: 10px;
+}
