@@ -124,6 +124,8 @@ export function decorateMain(main) {
   decorateSections(main);
   decorateBlocks(main);
   decorateButtons(main);
+
+  const swiperCSS = document.createElement('link'); swiperCSS.rel = 'stylesheet'; swiperCSS.href = 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css'; document.head.append(swiperCSS); const swiperJS = document.createElement('script'); swiperJS.src = 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js'; document.head.append(swiperJS);
 }
 
 /**
