@@ -22,9 +22,6 @@ export default async function decorate(block) {
 
   block.append(footer);
 
-  /* --------------------------
-     HANDLE BACKGROUND IMAGE
-  ---------------------------*/
 
   const bgPicture = block.querySelector('.columns-img-col picture');
 
@@ -38,14 +35,10 @@ export default async function decorate(block) {
       block.style.backgroundRepeat = 'no-repeat';
     }
 
-    // remove picture wrapper so it does not appear in layout
     const bgWrapper = bgPicture.closest('.columns-img-col');
     if (bgWrapper) bgWrapper.remove();
   }
 
-  /* --------------------------
-     MAIN FOOTER COLUMNS
-  ---------------------------*/
 
   const footerColumns = block.querySelector('.columns.footer');
   if (!footerColumns) return;
@@ -59,9 +52,6 @@ export default async function decorate(block) {
     col.classList.add('footer-col', `footer-col-${index + 1}`);
   });
 
-  /* --------------------------
-     GALLERY (4th column)
-  ---------------------------*/
 
   const galleryColumn = block.querySelector('.footer-col-4');
 
@@ -87,9 +77,6 @@ export default async function decorate(block) {
     galleryColumn.append(galleryWrapper);
   }
 
-  /* --------------------------
-     FOOTER BOTTOM
-  ---------------------------*/
 
   const bottomColumns = block.querySelector('.columns.footer-bottom');
 
