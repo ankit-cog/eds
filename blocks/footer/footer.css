@@ -23,9 +23,6 @@ footer .footer p {
 }
 
 .footer.block {
-    background-image: url(https://themeloto.com/wps/transpo/wp-content/uploads/2024/11/transpo-slider.jpg);
-    background-size: cover;
-    background-position: center center;
     position: relative;
     z-index: 1;
 }
@@ -199,3 +196,6 @@ footer .footer p {
   color:#eb1933
 }
 
+.footer-wrapper .columns-container .columns-wrapper:first-child {
+    padding: 100px 0 90px;
+}
