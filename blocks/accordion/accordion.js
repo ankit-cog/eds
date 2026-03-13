@@ -20,4 +20,20 @@ export default function decorate(block) {
     details.append(summary, body);
     row.replaceWith(details);
   });
+
+  const accordion = document.querySelector('.accordion-wrapper');
+const columns = document.querySelector('.columns-wrapper');
+
+if (accordion && columns) {
+  const parent = accordion.parentElement;
+
+  const wrapper = document.createElement('div');
+  wrapper.classList.add('content-wrapper');
+
+  parent.insertBefore(wrapper, accordion);
+
+  wrapper.appendChild(accordion);
+  wrapper.appendChild(columns);
+}
+
 }
