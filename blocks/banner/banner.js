@@ -19,8 +19,6 @@ export default function decorate(block) {
     if (wrapper) wrapper.remove();
   }
 
-  /* ---------- EXISTING WORKING CODE ---------- */
-
   const contentWrapper = block.children[1];
   if (!contentWrapper) return;
 
