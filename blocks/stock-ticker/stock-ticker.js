@@ -16,7 +16,7 @@ export default function decorate(block) {
 
   let currentMarket = 'NSE';
 
-  // ⚡ Lazy Load using IntersectionObserver
+  // Lazy Load using IntersectionObserver
   const observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
       loadTicker();
@@ -26,13 +26,13 @@ export default function decorate(block) {
 
   observer.observe(block);
 
-  // 🔄 Load ticker data
+  // Load ticker data
   async function loadTicker() {
     const data = await getMockData(currentMarket);
     renderTicker(data);
   }
 
-  // 🧠 Mock API (replace with real API later)
+  // Mock API (replace with real API later)
   async function getMockData(market) {
     const stocks = {
       NSE: [
@@ -50,7 +50,7 @@ export default function decorate(block) {
     return new Promise((res) => setTimeout(() => res(stocks[market]), 300));
   }
 
-  // 🎯 Render ticker
+  // Render ticker
   function renderTicker(data) {
     track.innerHTML = '';
 
@@ -68,7 +68,7 @@ export default function decorate(block) {
     track.innerHTML = content + content;
   }
 
-  // 🔁 Market toggle
+  // Market toggle
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
       buttons.forEach((b) => b.classList.remove('active'));
@@ -79,7 +79,7 @@ export default function decorate(block) {
     });
   });
 
-  // 🌙 Dark mode toggle
+  // Dark mode toggle
   themeToggle.addEventListener('click', () => {
     block.classList.toggle('dark');
   });
